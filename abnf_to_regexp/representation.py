@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
 """Provide common functions for representing regular expressions."""
 
 import io

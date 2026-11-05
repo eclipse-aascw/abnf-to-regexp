@@ -1,2 +1,6 @@
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
 # ABNF files require CRLF line endings in order to be parseable!
 *.abnf -crlf

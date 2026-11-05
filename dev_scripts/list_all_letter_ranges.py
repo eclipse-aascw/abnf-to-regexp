@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
 """List all the letter ranges as ranges of unicode characters."""
 
 import sys
