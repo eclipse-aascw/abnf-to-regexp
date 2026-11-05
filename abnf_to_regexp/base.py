@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
 """Provide base building blocks for the regular expressions."""
 
 import abc

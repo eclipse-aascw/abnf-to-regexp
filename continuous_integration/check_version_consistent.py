@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
 """Check that the version in ``pyproject.toml`` and ``__init__.py`` coincide."""
 
 import importlib.metadata
