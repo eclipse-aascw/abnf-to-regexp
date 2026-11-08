@@ -1,0 +1,94 @@
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
+version = 1
+
+# Prose and metadata where a header would end up in the rendered output
+# (e.g., README shown on PyPI) or which can not carry a comment.
+[[annotations]]
+path = ["AUTHORS", "CHANGELOG.rst", "README.rst", "abnf_to_regexp/py.typed"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 abnf-to-regexp AUTHORS"
+SPDX-License-Identifier = "MIT"
+
+# The recorded test outputs and the (counter-)examples are compared or matched
+# byte-by-byte by the tests, so they must not carry a header. The grammar with
+# cycles is a test input written for this project.
+[[annotations]]
+path = [
+    "test_data/**/expected.err",
+    "test_data/**/expected.out",
+    "test_data/**/expected.py",
+    "test_data/**/example_*.txt",
+    "test_data/**/counter_example_*.txt",
+    "test_data/nested-python/grammar_with_cycles/grammar.abnf",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 abnf-to-regexp AUTHORS"
+SPDX-License-Identifier = "MIT"
+
+# These test grammars are copied from IETF RFCs (and BCP 47). We keep them as
+# copied and do not add a header. Which license applies depends on when the
+# RFC was published:
+# - RFCs published since 10 November 2008 are under the IETF Trust Legal
+#   Provisions, which license their code components, such as ABNF, under the
+#   Revised BSD License.
+# - RFCs published before keep the copyright statement of the Internet Society
+#   they were published with: the one of RFC 2026 (RFC 2373, 2396, 2732 and
+#   3339) or the one referring to BCP 78 as defined by RFC 3667 (RFC 3986 and
+#   3987).
+# A grammar that combines rules from several RFCs lists all of them.
+[[annotations]]
+path = "test_data/nested-python/bcp47/grammar.abnf"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2009 IETF Trust and the persons identified as authors of the code"
+SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = "test_data/nested-python/internet_media_type/grammar.abnf"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2014 IETF Trust and the persons identified as authors of the code"
+SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = "test_data/nested-python/rfc2396/grammar.abnf"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "1998 The Internet Society"
+SPDX-License-Identifier = "LicenseRef-ISOC-RFC-Copyright-Statement"
+
+# RFC 2396, amended by RFC 2732, with the IPv4 and IPv6 rules of RFC 2373.
+[[annotations]]
+path = "test_data/nested-python/rfc2732/grammar.abnf"
+precedence = "aggregate"
+SPDX-FileCopyrightText = ["1998 The Internet Society", "1999 The Internet Society"]
+SPDX-License-Identifier = "LicenseRef-ISOC-RFC-Copyright-Statement"
+
+[[annotations]]
+path = "test_data/nested-python/rfc3339/grammar.abnf"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2002 The Internet Society"
+SPDX-License-Identifier = "LicenseRef-ISOC-RFC-Copyright-Statement"
+
+[[annotations]]
+path = [
+    "test_data/nested-python/rfc3986/grammar.abnf",
+    "test_data/nested-python/rfc3987/grammar.abnf",
+    "test_data/single-regexp/rfc3987/grammar.abnf",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2005 The Internet Society"
+SPDX-License-Identifier = "LicenseRef-IETF-BCP78-RFC3667"
+
+# RFC 8089 and RFC 8141 with the rules they take from RFC 3986.
+[[annotations]]
+path = [
+    "test_data/nested-python/rfc8089/grammar.abnf",
+    "test_data/single-regexp/rfc8141/grammar.abnf",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = [
+    "2017 IETF Trust and the persons identified as authors of the code",
+    "2005 The Internet Society",
+]
+SPDX-License-Identifier = "BSD-3-Clause AND LicenseRef-IETF-BCP78-RFC3667"

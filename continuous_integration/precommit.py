@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
 """Run pre-commit checks on the repository."""
 import argparse
 import enum
@@ -18,6 +22,7 @@ class Step(enum.Enum):
     DOCTEST = "doctest"
     CHECK_VERSION_CONSISTENT = "check-version-consistent"
     CHECK_HELP_IN_README = "check-help-in-readme"
+    REUSE = "reuse"
 
 
 def main() -> int:
@@ -206,6 +211,21 @@ def main() -> int:
             )
     else:
         print("Skipped checking that --help's and the doc coincide.")
+
+    if Step.REUSE in selects and Step.REUSE not in skips:
+        if sys.version_info >= (3, 10):
+            print("Checking the REUSE compliance...")
+            subprocess.check_call(
+                [sys.executable, "-m", "reuse", "lint"], cwd=str(repo_root)
+            )
+        else:
+            print(
+                f"Since reuse requires Python 3.10 or newer, "
+                f"we do not check the REUSE compliance on your version of "
+                f"Python ({sys.version})."
+            )
+    else:
+        print("Skipped checking the REUSE compliance.")
 
     return 0
 

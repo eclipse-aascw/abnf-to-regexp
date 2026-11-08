@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 abnf-to-regexp AUTHORS
+#
+# SPDX-License-Identifier: MIT
+
 """Provide building blocks for transformation of ABNF to something else."""
 
 import abc
